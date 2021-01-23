@@ -1,4 +1,4 @@
-@echo off
+rem @echo off
 
 set ZH_HOME=%1
 set BASE=%~dp0
@@ -11,12 +11,12 @@ if "%TARGET%" == "" (
 cd %BASE%
 git pull
 
-copy /F zh_download.cmd %ZH_HOME%
+copy /Y zh_download.cmd %ZH_HOME%
 
 exit /B 0
 
 
-copy /F controller.cmd %ZH_HOME%
+copy /Y controller.cmd %ZH_HOME%
 
 call :MAKELINK "ziphttpd"
 call :MAKELINK "selector"

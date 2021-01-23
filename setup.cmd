@@ -22,7 +22,7 @@ copy %SOURCE% %TARGET%
 exit /B 0
 
 
-copy /Y controller.cmd %ZH_HOME%
+copy /F controller.cmd %ZH_HOME%
 
 call :MAKELINK "ziphttpd"
 call :MAKELINK "selector"

@@ -16,8 +16,8 @@ set SOURCE=%SCRIPTDIR%%FILE%
 set TARGET=%ZH_HOME%%FILE%
 
 if exist %TARGET%.old del /Y %TARGET%.old
-if exist %TARGET% ren %TARGET% %TARGET%.old
-copy z%SOURCE% %TARGET%
+if exist %TARGET% ren %TARGET% %FILE%.old
+copy %SOURCE% %TARGET%
 
 exit /B 0
 

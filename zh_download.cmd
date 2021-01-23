@@ -30,12 +30,12 @@ exit /B 0
 	echo "PROJECT BUILD START: %PRJ%"
 	set PRJ_DIR=%ZH_SRC%\%PRJ%
 
+	cd %ZH_SRC%
 	if not exist %PRJ_DIR% git clone https://github.com/ziphttpd/%PRJ%
+
 	cd %PRJ_DIR%
 	git pull
 	if exist %PRJ_DIR%\setup.cmd %PRJ_DIR%\setup.cmd %ZH_HOME%
 	echo "PROJECT BUILD   END: %PRJ%"
-
-	cd %ZH_SRC%
 
 exit /b

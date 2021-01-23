@@ -21,6 +21,7 @@ call :SETUP_PROJECT ziphttpd
 call :SETUP_PROJECT zhsig
 call :SETUP_PROJECT selector
 call :SETUP_PROJECT updater
+call :SETUP_PROJECT Launcher
 
 popd
 

@@ -15,7 +15,7 @@ set FILE=zh_download.cmd
 set SOURCE=%SCRIPTDIR%%FILE%
 set TARGET=%ZH_HOME%%FILE%
 
-if exist %TARGET%.old del /Y %TARGET%.old
+if exist %TARGET%.old del /F %TARGET%.old
 if exist %TARGET% ren %TARGET% %FILE%.old
 copy %SOURCE% %TARGET%
 
